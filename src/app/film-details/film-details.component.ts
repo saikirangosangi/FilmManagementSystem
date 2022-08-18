@@ -17,6 +17,15 @@ export class FilmDetailsComponent implements OnInit {
     this.filmService.getFilm().subscribe(data=>{
       this.filmService.listFilms=data;
     });
+    this.filmService.getActors().subscribe(data=>{
+      this.filmService.listActors=data;
+    });
+    this.filmService.getLanguages().subscribe(data=>{
+      this.filmService.listLanguage=data;
+    });
+    this.filmService.getCategories().subscribe(data=>{
+      this.filmService.listCategory=data;
+    });
   }
 
   populateFilm(SelectedFilms:film)
